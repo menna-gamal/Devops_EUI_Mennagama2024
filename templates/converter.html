@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    
+
+</head>
+<body>
+    <div class="wraper">
+        <div class="inputBox">
+            <h6>Celsius</h6>
+            <input type="number" id="celsius"/>
+        </div>
+        <i class="icon">=</i>
+        <div class="inputBox">
+            <h6>Fahrenheit</h6>
+            <input type="number" id="fahrenheit"/>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
