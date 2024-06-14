@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app1:
+    build: .
+    container_name: app1
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+       - ./count.json:/app/count.json  
+    ports:
+      - "5000:5000"
+
+  app2:
+    build: .
+    container_name: app2
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+       - ./count.json:/app/count.json 
+    ports:
+      - "5001:5000"  # Changed the external port for app2
